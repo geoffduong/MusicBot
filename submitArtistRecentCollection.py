@@ -31,6 +31,10 @@ def formatResults(result):
                             i['collectionViewUrl'])
     return tableResults
 
+# Process submission
+def processSubmission(submission):
+
+
 # Main method
 if __name__ == "__main__":
     # Get args
@@ -62,7 +66,8 @@ if __name__ == "__main__":
 
     """ Reddit submission here """
     titleText = artistName + '\'s ' + limit +' Most Recent iTunes Albums'
-    reddit = praw.Reddit(client_id = Config.client_id,
+    reddit = praw.Reddit(user_agent = 'Test (by /u/mrricearoni)',
+            client_id = Config.client_id,
             client_secret = Config.client_secret,
             password = Config.password,
             user_agent = 'asdf',
